@@ -2,63 +2,68 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Home">
+<Layout title="خانه">
     
     <!-- Hero Section -->
-    <section class="min-h-[50vh] flex flex-col justify-center max-w-4xl mx-auto">
-        <div class="flex flex-col md:flex-row items-center gap-10">
+    <section class="min-h-[50vh] flex flex-col justify-center items-center max-w-4xl mx-auto">
+        
+        <div class="flex flex-col items-center gap-6">
             
-            <!-- Your Picture -->
+            <!-- Your Picture (بالا) -->
             <div class="relative shrink-0">
-                <div class="w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-slate-800 shadow-2xl shadow-indigo-500/20">
+                <div class="w-40 h-40 md:w-60 md:h-60 rounded-full overflow-hidden border-2 border-slate-800 shadow-2xl shadow-indigo-500/20">
                     <img 
                         src="/profile.jpg" 
-                        alt="Saeed Farzpour" 
+                        alt="سعید فرزپور" 
                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     />
                 </div>
             </div>
 
-            <!-- Text Only (Socials Removed) -->
-            <div class="text-center md:text-left">
-                <h1 class="text-5xl md:text-4xl font-bold tracking-tight mb-4">
-                    Saeed Farzpour
+            <!-- Text (پایین عکس) -->
+            <div class="text-center">
+                <h2 class="font-['iransansbold'] text-5xl text-slate-200">
+                    سعید فرض‌پور
                 </h1>
-                <p class="text-xl text-slate-400 mb-8">
-                    Author and Entrepreneur
+                <p class="text-xl text-slate-400">
+                    
+				
                 </p>
             </div>
         </div>
-    </section>	
+    </section>		
 
     <!-- Quote Section -->
     <section id="quote" class="py-2 max-w-3xl mx-auto text-center">
-        <svg class="w-8 h-8 text-indigo-500 mx-auto mb-6 opacity-50" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.0547 15.3242 15.3047 16.1953 15.0234L16.1953 21H14.017ZM5 21L5 18C5 16.0547 6.30719 15.3047 7.17812 15.0234L7.17812 21H5Z" /></svg>
-        <!-- Fixed Font Size: text-lg md:text-xl -->
-        <h2 class="font-['Lora'] text-lg md:text-xl italic leading-relaxed text-slate-200">
-            "To be honest, I had never believed in fate. But this time, I had to change the way I looked at life. I had to believe that in this world there are abandoned stations that will change our lives forever; that where we stepped off, or where we boarded, mattered; that the journey had transformed me into someone else. What I once thought to be a mere coincidence was, in truth, destiny..."
+        <!-- Icon rotated 180 for RTL -->
+        <svg class="w-8 h-8 text-indigo-500 mx-auto mb-6 opacity-50 rotate-180" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.0547 15.3242 15.3047 16.1953 15.0234L16.1953 21H14.017ZM5 21L5 18C5 16.0547 6.30719 15.3047 7.17812 15.0234L7.17812 21H5Z" /></svg>
+        
+        <!-- Using font-iran class -->
+        <h2 class="font-['iransans'] text-2xl text-slate-200">
+            "راستش را بخواهی من هرگز به تقدیر باور نداشتم اما این بار باید نگاهم به زندگی را تغییر می‌دادم. 
+باید باور می‌کردم در این جهان ایستگاه‌های متروکه‌ای وجود دارند که زندگی ما را برای همیشه تغییر خواهند داد. اینکه کجا پیاده می‌شدم یا کجا سوار می‌شدم. اینکه سفر مرا به آدمی متفاوت بدل کرده بود. آنچه که روزی می‌پنداشتم رویدادی اتفاقی است به راستی تقدیر بود..."
         </h2>
-        <p class="mt-4 text-indigo-400 font-medium">- Saeed Farzpour</p>
+        <p class="mt-4 text-indigo-400 font-medium"> </p>
     </section>
 
-    <!-- Social Media Section (Moved Here) -->
+    <!-- Social Media Section -->
     <section class="py-16 max-w-4xl mx-auto text-center border-t border-slate-900">
-        <p class="text-slate-500 text-sm mb-6 uppercase tracking-widest">Connect with me</p>
+        <p class="text-slate-500 text-sm mb-6 uppercase tracking-widest">ارتباط با من</p>
         <div class="flex flex-wrap gap-4 justify-center">
             <a href="https://youtube.com/saeedfarzpour" target="_blank" class="px-6 py-3 bg-slate-900 border border-slate-700 rounded-full hover:bg-white hover:text-black transition-all text-sm font-medium">
-                Youtube
+                یوتیوب
             </a>
             <a href="https://www.instagram.com/saeedfarzpour" target="_blank" class="px-6 py-3 bg-slate-900 border border-slate-700 rounded-full hover:bg-pink-600 hover:text-white hover:border-pink-600 transition-all text-sm font-medium">
-                Instagram
+                اینستاگرام
             </a>
             <a href="https://x.com/saeedfarzpour" target="_blank" class="px-6 py-3 bg-slate-900 border border-slate-700 rounded-full hover:bg-sky-500 hover:text-white hover:border-sky-500 transition-all text-sm font-medium">
-                X.com
+                ایکس
             </a>
-			<a href="https://s.farzpour@gmail.com" target="_blank" class="px-6 py-3 bg-slate-900 border border-slate-700 rounded-full hover:bg-pink-500 hover:text-white hover:border-pink-500 transition-all text-sm font-medium">
-                Gmail
+            <!-- Changed to mailto: for better functionality -->
+            <a href="mailto:s.farzpour@gmail.com" class="px-6 py-3 bg-slate-900 border border-slate-700 rounded-full hover:bg-pink-500 hover:text-white hover:border-pink-500 transition-all text-sm font-medium">
+                جی‌میل
             </a>
         </div>
     </section>
-	
 
 </Layout>

@@ -1,6 +1,6 @@
 ---
 // src/layouts/Layout.astro
-import '../styles/global.css'; // <--- ADD THIS LINE HERE
+import '../styles/global.css';
 
 interface Props {
     title: string;
@@ -10,7 +10,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fa" dir="rtl">
     <head>
         <meta charset="UTF-8" />
         <meta name="description" content="Saeed Farzpour Portfolio" />
@@ -18,23 +18,38 @@ const { title } = Astro.props;
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         
-        <!-- Modern Google Font -->
+        <!-- 1. Vazirmatn (General Font) -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;500;700&display=swap" rel="stylesheet">
         
-        <title>{title} - Saeed Farzpour</title>
+        <!-- 2. IranSans (Quote Font - via CDN) -->
+        <link href="https://cdn.jsdelivr.net/gh/rastikerdar/iransans@v33.003/font-face.css" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/gh/rastikerdar/gandom-font@v3.0.0/font-face.css" rel="stylesheet" type="text/css" />
+        <title>{title} - سعید فرزپور</title>
     </head>
-    <body class="bg-slate-950 text-white font-sans antialiased selection:bg-indigo-500 selection:text-white">
+    
+    <!-- 3. Set Default Font to Vazirmatn -->
+    <body class="bg-slate-950 text-white font-['Vazirmatn'] antialiased selection:bg-indigo-500 selection:text-white">
 
         <main class="pt-12 px-6">
             <slot />
         </main>
-		    <!-- Footer / Copyright -->
-    <footer class="py-8 border-t border-slate-900 text-center">
-        <div class="max-w-4xl mx-auto px-6 text-slate-600 text-sm">
-            <p>&copy; {new Date().getFullYear()} Saeed Farzpour. All rights reserved.</p>
-        </div>
-    </footer>
+
+        <!-- Footer / Copyright -->
+        <footer class="py-8 border-t border-slate-900 text-center">
+            <div class="max-w-4xl mx-auto px-6 text-slate-600 text-sm">
+                <p>&copy; {new Date().getFullYear()} سعید فرض‌پور. تمامی حقوق محفوظ است</p>
+            </div>
+        </footer>
+
+        <!-- 4. Helper CSS for the Quote Font -->
+        <style is:global>
+            .font-iran {
+                font-family: 'IranSans', sans-serif !important;
+            }
+        </style>
     </body>
 </html>
