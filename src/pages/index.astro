@@ -1,11 +1,64 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Home">
+    
+    <!-- Hero Section -->
+    <section class="min-h-[50vh] flex flex-col justify-center max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            
+            <!-- Your Picture -->
+            <div class="relative shrink-0">
+                <div class="w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-slate-800 shadow-2xl shadow-indigo-500/20">
+                    <img 
+                        src="/profile.jpg" 
+                        alt="Saeed Farzpour" 
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+            </div>
+
+            <!-- Text Only (Socials Removed) -->
+            <div class="text-center md:text-left">
+                <h1 class="text-5xl md:text-4xl font-bold tracking-tight mb-4">
+                    Saeed Farzpour
+                </h1>
+                <p class="text-xl text-slate-400 mb-8">
+                    Author and Entrepreneur
+                </p>
+            </div>
+        </div>
+    </section>	
+
+    <!-- Quote Section -->
+    <section id="quote" class="py-2 max-w-3xl mx-auto text-center">
+        <svg class="w-8 h-8 text-indigo-500 mx-auto mb-6 opacity-50" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.0547 15.3242 15.3047 16.1953 15.0234L16.1953 21H14.017ZM5 21L5 18C5 16.0547 6.30719 15.3047 7.17812 15.0234L7.17812 21H5Z" /></svg>
+        <!-- Fixed Font Size: text-lg md:text-xl -->
+        <h2 class="font-['Lora'] text-lg md:text-xl italic leading-relaxed text-slate-200">
+            "To be honest, I had never believed in fate. But this time, I had to change the way I looked at life. I had to believe that in this world there are abandoned stations that will change our lives forever; that where we stepped off, or where we boarded, mattered; that the journey had transformed me into someone else. What I once thought to be a mere coincidence was, in truth, destiny..."
+        </h2>
+        <p class="mt-4 text-indigo-400 font-medium">- Saeed Farzpour</p>
+    </section>
+
+    <!-- Social Media Section (Moved Here) -->
+    <section class="py-16 max-w-4xl mx-auto text-center border-t border-slate-900">
+        <p class="text-slate-500 text-sm mb-6 uppercase tracking-widest">Connect with me</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+            <a href="https://youtube.com/saeedfarzpour" target="_blank" class="px-6 py-3 bg-slate-900 border border-slate-700 rounded-full hover:bg-white hover:text-black transition-all text-sm font-medium">
+                Youtube
+            </a>
+            <a href="https://www.instagram.com/saeedfarzpour" target="_blank" class="px-6 py-3 bg-slate-900 border border-slate-700 rounded-full hover:bg-pink-600 hover:text-white hover:border-pink-600 transition-all text-sm font-medium">
+                Instagram
+            </a>
+            <a href="https://x.com/saeedfarzpour" target="_blank" class="px-6 py-3 bg-slate-900 border border-slate-700 rounded-full hover:bg-sky-500 hover:text-white hover:border-sky-500 transition-all text-sm font-medium">
+                X.com
+            </a>
+			<a href="https://s.farzpour@gmail.com" target="_blank" class="px-6 py-3 bg-slate-900 border border-slate-700 rounded-full hover:bg-pink-500 hover:text-white hover:border-pink-500 transition-all text-sm font-medium">
+                Gmail
+            </a>
+        </div>
+    </section>
+	
+
 </Layout>
